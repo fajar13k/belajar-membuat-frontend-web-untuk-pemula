@@ -182,7 +182,7 @@ function makeBookInterface(bookObject) {
     bookActionContainer.append(completeButton);
   }
 
-  const cardFlexContainer = document.createElement("div");
+  const cardFlexContainer = document.createElement("article");
   cardFlexContainer.classList.add("card-flex");
   cardFlexContainer.append(bookDetailContainer, bookActionContainer);
 

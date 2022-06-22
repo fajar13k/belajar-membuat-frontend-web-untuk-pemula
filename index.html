@@ -26,7 +26,7 @@
       <div class="container">
         <div class="card card-content">
           <object data="assets/book-vector.svg" width="64" height="64"></object>
-          <div class="card-head">
+          <header class="card-head">
             <h2 class="title">Purpose</h2>
             <p class="subtitle">
               Final submission for Dicoding's
@@ -35,9 +35,11 @@
               >
               to submit a Bookshelf App.
             </p>
-          </div>
+          </header>
+
           <hr />
-          <div class="card-body">
+
+          <section class="card-body">
             <h2 class="title">Add new Book</h2>
             <form action="#" id="form">
               <div class="form-group form-title">
@@ -61,10 +63,10 @@
                 Add Book
               </button>
             </form>
-          </div>
+          </section>
         </div>
 
-        <div class="card card-content flex" id="search-book">
+        <section class="card card-content flex" id="search-book">
           <form action="#" id="form-search" class="w-100">
             <div class="form-group form-title w-100">
               <label for="search-title">Search Book by Title</label>
@@ -91,35 +93,46 @@
                 >
                   Clear Search
                 </button>
+                <button
+                  type="submit"
+                  name="modal"
+                  id="modal"
+                  class="btn btn-outline"
+                >
+                  Modal
+                </button>
               </div>
             </div>
           </form>
-        </div>
+        </section>
 
-        <div class="card card-success flex hidden" id="alert-success-book">
+        <section class="card card-success flex hidden" id="alert-success-book">
           <p id="book-notification">Book status updated!</p>
           <object
             data="assets/alert-svgrepo-com.svg"
             width="32"
             height="32"
           ></object>
-        </div>
+        </section>
 
-        <div class="card card-content">
+        <section class="card card-content">
           <div clsss="card-head">
             <h2 class="title">Unfinished</h2>
           </div>
           <div id="incomplete-books" class="card-body"></div>
-        </div>
+        </section>
 
-        <div class="card card-content">
+        <section class="card card-content">
           <div clsss="card-head">
             <h2 class="title">Finished</h2>
           </div>
           <div id="completed-books" class="card-body"></div>
-        </div>
+        </section>
       </div>
     </main>
+
+    <div id="deleteModal" class="modal"></div>
+
     <script src="./assets/js/script.js" type="text/javascript"></script>
   </body>
 </html>

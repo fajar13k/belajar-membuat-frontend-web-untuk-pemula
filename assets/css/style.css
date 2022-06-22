@@ -1,6 +1,15 @@
 :root {
   font-size: 16px;
   font-family: sans-serif;
+  --white: #fff;
+  --lighter: #f0f0f0;
+  --lighter-1: #dedede;
+  --dark: #333;
+  --darker: #111;
+  --primary: #ff003b;
+  --primary-darker: #d60032;
+  --secondary: #fbec00;
+  --success: #00a676;
 }
 
 * {
@@ -10,15 +19,15 @@
 }
 
 body {
-  background: #111;
+  background: var(--darker);
 }
 
 h1 {
-  color: #333;
+  color: var(--dark);
 }
 
 nav {
-  background: #fbec00;
+  background: var(--secondary);
   padding: 0.75em 1em;
   display: flex;
   justify-content: space-between;
@@ -41,9 +50,9 @@ main {
 
 .btn-source {
   font-weight: 600;
-  background: #fff;
-  color: #333;
-  border: 2px solid #333;
+  background: var(--white);
+  color: var(--dark);
+  border: 2px solid var(--dark);
   position: relative;
   text-align: center;
   transition: all 0.35s;
@@ -62,12 +71,12 @@ main {
   width: 0;
   height: 100%;
   border-radius: 0.3rem;
-  background: #ff003b;
+  background: var(--primary);
   transition: all 0.35s;
 }
 
 .btn-source:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .btn-source:hover:after {
@@ -75,42 +84,42 @@ main {
 }
 
 .btn-submit {
-  border: 2px solid #333;
-  color: #fff;
+  border: 2px solid var(--dark);
+  color: var(--white);
   margin-top: auto;
   align-self: flex-end;
-  background: #ff003b;
+  background: var(--primary);
 }
 
 .btn-submit:hover {
-  background: #d60032;
+  background: var(--primary-darker);
 }
 
 .btn-submit:focus {
-  background: #d60032;
+  background: var(--primary-darker);
 }
 
 .btn-card-action {
-  background: #fff;
-  border: 2px solid #333;
+  background: var(--white);
+  border: 2px solid var(--dark);
   font-size: 0.75rem;
 }
 
 .btn-card-action:hover {
-  background: #f0f0f0;
+  background: var(--lighter);
 }
 
 .btn-outline {
-  border: 2px solid #ff003b;
-  color: #333;
+  border: 2px solid var(--primary);
+  color: var(--dark);
   margin-top: auto;
   align-self: flex-end;
-  background: #fff;
+  background: var(--white);
 }
 
 .btn-outline:hover {
-  background: #ff003b;
-  color: #fff;
+  background: var(--primary);
+  color: var(--white);
 }
 
 .wrapper {
@@ -132,14 +141,14 @@ main {
 }
 
 .card-success {
-  background: #00a676;
-  border: 2px solid #fff;
-  color: #fff;
+  background: var(--success);
+  border: 2px solid var(--white);
+  color: var(--white);
 }
 
 .card-content {
-  background: #fff;
-  border: 2px solid #ff003b;
+  background: var(--white);
+  border: 2px solid var(--primary);
 }
 
 .title {
@@ -147,14 +156,14 @@ main {
 }
 
 a {
-  color: #ff003b;
-  border-bottom: 0.5px solid #ff003b;
+  color: var(--primary);
+  border-bottom: 0.5px solid var(--primary);
   transition: all 0.1s;
   font-weight: 600;
 }
 
 a:hover {
-  border-bottom: 2px solid #ff003b;
+  border-bottom: 2px solid var(--primary);
 }
 
 hr {
@@ -173,8 +182,8 @@ hr {
 
 input[type="text"],
 input[type="number"] {
-  background: #fff;
-  border: 2px solid #dedede;
+  background: var(--white);
+  border: 2px solid var(--lighter-1);
   border-radius: 0.3rem;
   padding: 0.5em;
   box-sizing: border-box;
@@ -184,7 +193,7 @@ input[type="number"] {
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-  border: 2px solid #ff003b;
+  border: 2px solid var(--primary);
 }
 
 input[type="text"],
@@ -198,9 +207,9 @@ input[type="number"],
   justify-content: space-between;
   align-items: center;
   padding: 1.25em;
-  background: #ff003b;
-  color: #fff;
-  border: 2px solid #333;
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--dark);
   border-radius: 0.3rem;
   margin-top: 1em;
 }
