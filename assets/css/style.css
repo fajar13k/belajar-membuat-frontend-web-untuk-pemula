@@ -100,6 +100,19 @@ main {
   background: #f0f0f0;
 }
 
+.btn-outline {
+  border: 2px solid #ff003b;
+  color: #333;
+  margin-top: auto;
+  align-self: flex-end;
+  background: #fff;
+}
+
+.btn-outline:hover {
+  background: #ff003b;
+  color: #fff;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -204,6 +217,10 @@ input[type="number"],
 
 .hidden {
   display: none;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {

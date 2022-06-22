@@ -64,6 +64,38 @@
           </div>
         </div>
 
+        <div class="card card-content flex" id="search-book">
+          <form action="#" id="form-search" class="w-100">
+            <div class="form-group form-title w-100">
+              <label for="search-title">Search Book by Title</label>
+              <div>
+                <input
+                  class="w-100"
+                  type="text"
+                  id="search-title"
+                  name="search-title"
+                />
+                <button
+                  type="submit"
+                  name="search"
+                  id="search"
+                  class="btn btn-submit"
+                >
+                  Search
+                </button>
+                <button
+                  type="submit"
+                  name="clear"
+                  id="clear"
+                  class="btn btn-outline"
+                >
+                  Clear Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
         <div class="card card-success flex hidden" id="alert-success-book">
           <p id="book-notification">Book status updated!</p>
           <object

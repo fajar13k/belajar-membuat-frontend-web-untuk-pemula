@@ -29,4 +29,4 @@ Which I did fulfill all of the requirements.
    - The feature to edit a book
    - etc.
 
-Currently I've implemented from point 2 - 4, I'm still trying to complete the 1st additional task.
+I also implemented all the additional conditions trying to achieve the perfect score!

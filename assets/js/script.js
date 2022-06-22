@@ -11,9 +11,25 @@ function isStorageExist() {
   return true;
 }
 
+function searchBook(bookTitle = "") {
+  let filteredBook;
+
+  filteredBook = books.filter((book) =>
+    book?.title?.toLowerCase().includes(bookTitle)
+  );
+
+  books.splice(0, books.length);
+  books.push(...filteredBook);
+
+  console.log(books);
+
+  document.dispatchEvent(new Event(RENDER_EVENT));
+}
+
 function loadDataFromStorage() {
   const serializedData = localStorage.getItem(STORAGE_KEY);
   let data = JSON.parse(serializedData);
+  books.splice(0, books.length);
 
   if (data !== null) {
     for (const book of data) {
@@ -186,6 +202,24 @@ document.addEventListener("DOMContentLoaded", () => {
   submitForm.addEventListener("submit", (event) => {
     event.preventDefault();
     addBook();
+  });
+
+  const searchForm = document.getElementById("form-search");
+  const inputSearch = document.getElementById("search-title");
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (inputSearch.value === "") {
+      loadDataFromStorage();
+    } else {
+      searchBook(inputSearch.value);
+    }
+  });
+
+  const clearSearch = document.getElementById("clear");
+  clearSearch.addEventListener("click", (event) => {
+    event.preventDefault();
+    loadDataFromStorage();
+    inputSearch.value = "";
   });
 });
 
