@@ -1,0 +1,225 @@
+:root {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #111;
+}
+
+h1 {
+  color: #333;
+}
+
+nav {
+  background: #fbec00;
+  padding: 0.75em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  padding: 1em 0;
+}
+
+.btn {
+  width: fit-content;
+  font-family: Raleway, sans-serif;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-source {
+  font-weight: 600;
+  background: #fff;
+  color: #333;
+  border: 2px solid #333;
+  position: relative;
+  text-align: center;
+  transition: all 0.35s;
+}
+
+.btn-source span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-source:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: #ff003b;
+  transition: all 0.35s;
+}
+
+.btn-source:hover {
+  color: #fff;
+}
+
+.btn-source:hover:after {
+  width: 100%;
+}
+
+.btn-submit {
+  border: 2px solid #333;
+  color: #fff;
+  margin-top: auto;
+  align-self: flex-end;
+  background: #ff003b;
+}
+
+.btn-submit:hover {
+  background: #d60032;
+}
+
+.btn-submit:focus {
+  background: #d60032;
+}
+
+.btn-card-action {
+  background: #fff;
+  border: 2px solid #333;
+  font-size: 0.75rem;
+}
+
+.btn-card-action:hover {
+  background: #f0f0f0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper .container {
+  width: 100%;
+  flex-grow: 1;
+  height: fit-content;
+}
+
+.card {
+  border-radius: 0.5rem;
+  padding: 1em;
+  margin: 1em;
+}
+
+.card-success {
+  background: #00a676;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.card-content {
+  background: #fff;
+  border: 2px solid #ff003b;
+}
+
+.title {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #ff003b;
+  border-bottom: 0.5px solid #ff003b;
+  transition: all 0.1s;
+  font-weight: 600;
+}
+
+a:hover {
+  border-bottom: 2px solid #ff003b;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.25em;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  background: #fff;
+  border: 2px solid #dedede;
+  border-radius: 0.3rem;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border: 2px solid #ff003b;
+}
+
+input[type="text"],
+input[type="number"],
+.btn-submit:focus {
+  outline: none;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em;
+  background: #ff003b;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 0.3rem;
+  margin-top: 1em;
+}
+
+.mr-2 {
+  margin-right: 0.5em;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    margin: 0 0 1em 0;
+  }
+
+  .wrapper .container {
+    padding: 1em;
+    flex-grow: 1;
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .wrapper .container {
+    width: 1024px;
+  }
+}

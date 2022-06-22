@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dicoding submission" />
+    <meta name="author" content="Fajar Nazmi Fadillah" />
+    <title>Dicoding Submission</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  </head>
+  <body>
+    <nav id="navigation">
+      <h1>RakBuku</h1>
+      <a
+        class="btn btn-source"
+        href="https://github.com/fajar13k"
+        role="button"
+        target="_blank"
+      >
+        <span>Source Code Here!</span>
+      </a>
+    </nav>
+
+    <main class="wrapper">
+      <div class="container">
+        <div class="card card-content">
+          <object data="assets/book-vector.svg" width="64" height="64"></object>
+          <div class="card-head">
+            <h2 class="title">Purpose</h2>
+            <p class="subtitle">
+              Final submission for Dicoding's
+              <a href="https://www.dicoding.com/academies/315" target="_blank"
+                >Belajar Membuat Front-End Web untuk Pemula</a
+              >
+              to submit a Bookshelf App.
+            </p>
+          </div>
+          <hr />
+          <div class="card-body">
+            <h2 class="title">Add new Book</h2>
+            <form action="#" id="form">
+              <div class="form-group form-title">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required />
+              </div>
+              <div class="form-group form-title">
+                <label for="date">Author</label>
+                <input type="text" id="author" name="author" required />
+              </div>
+              <div class="form-group form-title">
+                <label for="title">Publication Year</label>
+                <input type="number" id="year" name="year" required />
+              </div>
+              <button
+                type="submit"
+                value="Add Book"
+                name="Submit"
+                class="btn btn-submit"
+              >
+                Add Book
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card card-success flex hidden" id="alert-success-book">
+          <p id="book-notification">Book status updated!</p>
+          <object
+            data="assets/alert-svgrepo-com.svg"
+            width="32"
+            height="32"
+          ></object>
+        </div>
+
+        <div class="card card-content">
+          <div clsss="card-head">
+            <h2 class="title">Unfinished</h2>
+          </div>
+          <div id="incomplete-books" class="card-body"></div>
+        </div>
+
+        <div class="card card-content">
+          <div clsss="card-head">
+            <h2 class="title">Finished</h2>
+          </div>
+          <div id="completed-books" class="card-body"></div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/script.js" type="text/javascript"></script>
+  </body>
+</html>
