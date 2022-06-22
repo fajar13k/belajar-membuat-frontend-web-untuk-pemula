@@ -30,3 +30,7 @@ Which I did fulfill all of the requirements.
    - etc.
 
 I also implemented all the additional conditions trying to achieve the perfect score!
+
+## Screenshot
+
+![preview-page](assets/preview.png)
