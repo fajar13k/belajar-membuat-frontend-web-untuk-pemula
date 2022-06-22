@@ -110,7 +110,7 @@ main {
 }
 
 .btn-outline {
-  border: 2px solid var(--primary);
+  border: 2px solid var(--dark);
   color: var(--dark);
   margin-top: auto;
   align-self: flex-end;
