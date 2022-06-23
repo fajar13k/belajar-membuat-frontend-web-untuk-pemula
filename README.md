@@ -31,6 +31,10 @@ Which I did fulfill all of the requirements.
 
 I also implemented all the additional conditions trying to achieve the perfect score!
 
+## Preview
+
+If you'd like to preview the web live, please visit through [this link](https://fajar13k.github.io/belajar-membuat-frontend-web-untuk-pemula/)
+
 ## Screenshot
 
 ![preview-page](assets/preview.png)
