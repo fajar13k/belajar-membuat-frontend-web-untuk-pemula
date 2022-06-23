@@ -5,7 +5,7 @@ const STORAGE_KEY = "RAK_BUKU";
 
 function isStorageExist() {
   if (typeof Storage === undefined) {
-    alert("Browser kamu tidak mendukung local storage!");
+    alert("Your browser does not support local storage!");
     return false;
   }
   return true;
@@ -122,7 +122,7 @@ function undoBookFromCompleted(bookId) {
 }
 
 function removeBookFromCompleted(bookId) {
-  const bookTarget = findBook(bookId);
+  const bookTarget = findBookIndex(bookId);
 
   if (bookTarget === -1) return;
 
@@ -138,6 +138,16 @@ function makeBookInterface(bookObject) {
 
   const bookAuthor = document.createElement("p");
   bookAuthor.innerText = `By ${bookObject.author}`;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("btn", "btn-card-action");
+  deleteButton.setAttribute("type", "button");
+  deleteButton.setAttribute("value", "delete");
+  deleteButton.setAttribute("name", "Delete");
+  deleteButton.innerText = "Delete";
+  deleteButton.addEventListener("click", () => {
+    removeBookFromCompleted(bookObject.id);
+  });
 
   const bookDetailContainer = document.createElement("div");
   bookDetailContainer.classList.add("book-detail");
@@ -157,20 +167,10 @@ function makeBookInterface(bookObject) {
       undoBookFromCompleted(bookObject.id);
     });
 
-    const deleteButton = document.createElement("button");
-    deleteButton.classList.add("btn", "btn-card-action");
-    deleteButton.setAttribute("type", "button");
-    deleteButton.setAttribute("value", "delete");
-    deleteButton.setAttribute("name", "Delete");
-    deleteButton.innerText = "Delete";
-    deleteButton.addEventListener("click", () => {
-      removeBookFromCompleted(bookObject.id);
-    });
-
     bookActionContainer.append(undoButton, deleteButton);
   } else {
     const completeButton = document.createElement("button");
-    completeButton.classList.add("btn", "btn-card-action");
+    completeButton.classList.add("btn", "btn-card-action", "mr-2");
     completeButton.setAttribute("type", "button");
     completeButton.setAttribute("value", "finish");
     completeButton.setAttribute("name", "finish");
@@ -179,7 +179,7 @@ function makeBookInterface(bookObject) {
       addBookToCompleted(bookObject.id);
     });
 
-    bookActionContainer.append(completeButton);
+    bookActionContainer.append(completeButton, deleteButton);
   }
 
   const cardFlexContainer = document.createElement("article");
